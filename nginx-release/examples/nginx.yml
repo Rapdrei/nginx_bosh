@@ -1,0 +1,39 @@
+---
+name: nginx
+director_uuid: fb70f16a-4d6f-41f8-bc2e-0181a03dff18
+
+releases:
+- {name: nginx, version: 1}
+
+resource_pools:
+- name: nginx-server
+  network: default
+  stemcell:
+    alias: centos
+    os: centos-7
+    version: latest
+
+disk_pools:
+- name: default
+  disk_size: 2000
+
+compilation:
+  workers: 2
+  network: default
+  reuse_compilation_vms: true
+
+update:
+  canaries: 1
+  max_in_flight: 10
+  canary_watch_time: 1000-30000
+  update_watch_time: 1000-30000
+
+jobs:
+  - name: nginx
+    instances: 1
+    templates:
+    - {name: nginx, release: nginx}
+    persistent_disk: 1000
+    resource_pool: nginx-server
+    networks:
+    - name: default

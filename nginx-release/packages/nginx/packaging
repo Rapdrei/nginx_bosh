@@ -1,0 +1,16 @@
+# abort script on any command that exits with a non zero value
+set -e
+
+# untar nginx source files
+tar xzf nginx/nginx-1.10.1.tar.gz
+
+# push folder in temp
+pushd nginx-1.10.1
+  # configure build and defining server file location
+  # at BOSH_INSTALL_TARGET
+  ./configure --prefix=${BOSH_INSTALL_TARGET}
+
+  # build source
+  make
+  make install
+popd

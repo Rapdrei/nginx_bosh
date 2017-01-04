@@ -1,0 +1,7 @@
+---
+name: nginx
+
+dependencies:
+
+files:
+  - nginx/nginx-1.10.1.tar.gz
