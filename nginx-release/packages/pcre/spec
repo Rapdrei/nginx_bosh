@@ -4,4 +4,4 @@ name: pcre
 dependencies:
 
 files:
-  - pcre/pcre-8.4.0.tar.gz
+  - pcre/pcre-8.40.tar.gz
