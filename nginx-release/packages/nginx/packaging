@@ -1,18 +1,23 @@
 # abort script on any command that exits with a non zero value
 set -e
 
-# untar nginx source files
-tar xzf nginx/nginx-1.10.1.tar.gz
+echo "Extracting pcre..."
+tar xzvf nginx/pcre-8.40.tar.gz
 
-# push folder in temp
+echo "Extracting zlib..."
+tar xzvf zlib/zlib-1.2.11.tar.gz
+
+echo "Extracting nginx..."
+tar xzvf nginx/nginx-1.10.1.tar.gz
+
+echo "Building nginx"
+
 pushd nginx-1.10.1
-  # configure build and defining server file location
-  # at BOSH_INSTALL_TARGET
   ./configure \
     --prefix=${BOSH_INSTALL_TARGET} \
-    --with-pcre=/var/vcap/packages/pcre
+    --with-pcre=../pcre-8.40 \
+    --with-zlib=../zlib-1.2.11
 
-  # build source
   make
   make install
 popd

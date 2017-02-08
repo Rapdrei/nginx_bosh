@@ -1,0 +1,7 @@
+---
+name: open_ssl
+
+dependencies:
+
+files:
+  - open_ssl/openssl-1.0.2f.tar.gz
