@@ -8,4 +8,16 @@ builds:
     version: 0+dev.3
   2f7192e7-296b-46e7-9aa6-8b28f5ebe887:
     version: 0+dev.4
+  5f0af571-32a5-490f-bea0-87ecf6b1ce88:
+    version: 0+dev.5
+  c4fe71f6-a653-498d-be78-31c84f3d5b3c:
+    version: 0+dev.6
+  cba60dbe-162c-4861-ada2-172e8ea2dfc8:
+    version: 0+dev.7
+  5672943c-b40a-43a0-8d08-bd115faeb443:
+    version: 0+dev.8
+  2b96dc86-eff6-4330-8c58-f46cc5fa2709:
+    version: 0+dev.9
+  ee4f7966-6212-49e8-adf6-c84e1fbf87c8:
+    version: 0+dev.10
 format-version: '2'

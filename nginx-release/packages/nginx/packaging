@@ -8,7 +8,9 @@ tar xzf nginx/nginx-1.10.1.tar.gz
 pushd nginx-1.10.1
   # configure build and defining server file location
   # at BOSH_INSTALL_TARGET
-  ./configure --prefix=${BOSH_INSTALL_TARGET}
+  ./configure \
+    --prefix=${BOSH_INSTALL_TARGET} \
+    --with-pcre=/var/vcap/packages/pcre
 
   # build source
   make

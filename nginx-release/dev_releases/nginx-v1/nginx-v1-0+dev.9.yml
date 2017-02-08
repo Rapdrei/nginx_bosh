@@ -1,0 +1,28 @@
+---
+packages:
+- name: nginx
+  version: 431e6e730bdcb45de2378a01e4d55f214c4ed724
+  fingerprint: 431e6e730bdcb45de2378a01e4d55f214c4ed724
+  sha1: 94d975436d3ab4d89b2a34e9486b38a1f3987a44
+  dependencies:
+  - pcre
+  - zlib
+- name: pcre
+  version: e87fddad7109346fb9e4870dc9931b59b1e858b3
+  fingerprint: e87fddad7109346fb9e4870dc9931b59b1e858b3
+  sha1: 135a83bf92dc310bf0bb2e5db452aaabbf172ff1
+  dependencies: []
+- name: zlib
+  version: 620ec785a3892d106e9d453b26388ec7ac29de2d
+  fingerprint: 620ec785a3892d106e9d453b26388ec7ac29de2d
+  sha1: eca9fceb3514095ebd72f82f00015ad25b285039
+  dependencies: []
+jobs:
+- name: nginx
+  version: df8fd74b9e918ad7fe38d7a6582ec370c477f1ec
+  fingerprint: df8fd74b9e918ad7fe38d7a6582ec370c477f1ec
+  sha1: a7de23fb1acd562666120824f5e7b52033e3aded
+commit_hash: 9755fbb0
+uncommitted_changes: true
+name: nginx-v1
+version: 0+dev.9
