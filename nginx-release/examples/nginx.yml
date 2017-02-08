@@ -2,7 +2,7 @@ name: nginx
 director_uuid: 63ddb6a6-d6fe-40e1-b16b-2ff6b2034c79
 
 releases:
-- {name: nginx-v1, version: 0+dev.22}
+- {name: nginx-v1, version: 0+dev.25}
 
 resource_pools:
 - name: nginx-server
@@ -31,7 +31,7 @@ disk_pools:
 update:
   canaries: 1
   max_in_flight: 10
-  canary_watch_time: 1000-30000
+  canary_watch_time: 1000-100000
   update_watch_time: 1000-30000
 
 jobs:

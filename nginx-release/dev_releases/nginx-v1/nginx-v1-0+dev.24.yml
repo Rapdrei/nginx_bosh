@@ -1,0 +1,22 @@
+---
+packages:
+- name: nginx
+  version: 211ced9eba0a2a2b5cb879f1fbf74cfb01e10167
+  fingerprint: 211ced9eba0a2a2b5cb879f1fbf74cfb01e10167
+  sha1: f31b80607a0fa55b4cecb682bf5b1d9b1505b889
+  dependencies:
+  - open_ssl
+- name: open_ssl
+  version: 25d6ff56ae5d25cc5550a62d8d367456f8100735
+  fingerprint: 25d6ff56ae5d25cc5550a62d8d367456f8100735
+  sha1: 94ffe011cdac7a487403fbe799864bbca9966a7c
+  dependencies: []
+jobs:
+- name: nginx
+  version: 33e4e9091dbf7bcd63b054badce5c39fe5a35649
+  fingerprint: 33e4e9091dbf7bcd63b054badce5c39fe5a35649
+  sha1: 6e50bebc1d01537c7e0c3c8037c50eb3da746ed9
+commit_hash: 50dd2477
+uncommitted_changes: true
+name: nginx-v1
+version: 0+dev.24

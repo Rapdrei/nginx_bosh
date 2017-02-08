@@ -5,12 +5,14 @@ echo "Extracting pcre..."
 tar xzvf nginx/pcre-8.40.tar.gz
 
 echo "Extracting zlib..."
-tar xzvf pcre/zlib-1.2.11.tar.gz
+tar xzvf nginx/zlib-1.2.11.tar.gz
 
 echo "Extracting nginx..."
 tar xzvf nginx/nginx-1.10.1.tar.gz
 
 echo "Building nginx"
+
+echo in nginx folder: $(ls nginx-1.10.1)
 
 pushd nginx-1.10.1
   ./configure --prefix=${BOSH_INSTALL_TARGET} \
