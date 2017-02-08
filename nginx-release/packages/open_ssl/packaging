@@ -7,7 +7,7 @@ tar xzvf open_ssl/openssl-1.0.2f.tar.gz
 echo "Building open ssl"
 
 pushd openssl-1.0.2f
-  ./configure darwin64-x86_64-cc \
+  ./configure \
     --prefix=${BOSH_INSTALL_TARGET} \
 
   make

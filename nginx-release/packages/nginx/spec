@@ -6,5 +6,5 @@ dependencies:
 
 files:
   - nginx/nginx-1.10.1.tar.gz
-  - pcre/pcre-8.40.tar.gz
-  - zlib/zlib-1.2.11.tar.gz
+  - nginx/pcre-8.40.tar.gz
+  - nginx/zlib-1.2.11.tar.gz

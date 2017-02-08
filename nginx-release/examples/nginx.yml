@@ -2,7 +2,7 @@ name: nginx
 director_uuid: 63ddb6a6-d6fe-40e1-b16b-2ff6b2034c79
 
 releases:
-- {name: nginx-v1, version: 0+dev.3}
+- {name: nginx-v1, version: 0+dev.22}
 
 resource_pools:
 - name: nginx-server
