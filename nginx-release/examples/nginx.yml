@@ -2,7 +2,7 @@ name: nginx
 director_uuid: 63ddb6a6-d6fe-40e1-b16b-2ff6b2034c79
 
 releases:
-- {name: nginx, version: 1}
+- {name: nginx-v1, version: 0+dev.3}
 
 resource_pools:
 - name: nginx-server
@@ -15,6 +15,9 @@ resource_pools:
 networks:
   - name: default
     type: manual
+    subnets:
+    - range: 10.10.0.0/24
+      gateway: 10.10.0.1
 
 compilation:
   workers: 2
@@ -35,7 +38,7 @@ jobs:
   - name: nginx
     instances: 1
     templates:
-    - {name: nginx, release: nginx}
+    - {name: nginx, release: nginx-v1}
     persistent_disk: 1000
     resource_pool: nginx-server
     networks:
