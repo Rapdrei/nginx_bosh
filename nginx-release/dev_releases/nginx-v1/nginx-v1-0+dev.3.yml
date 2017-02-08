@@ -1,0 +1,16 @@
+---
+packages:
+- name: nginx
+  version: d030474522f8e56431d4360f2c13727ef3580d01
+  fingerprint: d030474522f8e56431d4360f2c13727ef3580d01
+  sha1: cbf1885144341b483d7ec37daeebdf13639bcd63
+  dependencies: []
+jobs:
+- name: nginx
+  version: 33e4e9091dbf7bcd63b054badce5c39fe5a35649
+  fingerprint: 33e4e9091dbf7bcd63b054badce5c39fe5a35649
+  sha1: 88bae278b4ec23ddf3024f953caefb38b1af7cf9
+commit_hash: 6ec03c88
+uncommitted_changes: true
+name: nginx-v1
+version: 0+dev.3

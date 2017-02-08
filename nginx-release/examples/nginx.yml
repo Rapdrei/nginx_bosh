@@ -1,6 +1,5 @@
----
 name: nginx
-director_uuid: fb70f16a-4d6f-41f8-bc2e-0181a03dff18
+director_uuid: 63ddb6a6-d6fe-40e1-b16b-2ff6b2034c79
 
 releases:
 - {name: nginx, version: 1}
@@ -9,18 +8,22 @@ resource_pools:
 - name: nginx-server
   network: default
   stemcell:
-    alias: centos
-    os: centos-7
-    version: latest
+    alias: bosh-warden-boshlite-ubuntu-trusty-go_agent
+    os: ubuntu-trusty
+    version: 3312.17
 
-disk_pools:
-- name: default
-  disk_size: 2000
+networks:
+  - name: default
+    type: manual
 
 compilation:
   workers: 2
   network: default
   reuse_compilation_vms: true
+
+disk_pools:
+- name: default
+  disk_size: 2000
 
 update:
   canaries: 1
@@ -37,3 +40,14 @@ jobs:
     resource_pool: nginx-server
     networks:
     - name: default
+
+properties:
+  nginx:
+    events:
+      worker_connections: 1024
+    http:
+      tcp_nopush: on
+      keepalive_timeout: 65
+      server:
+        listen: 80
+        server_name: localhost

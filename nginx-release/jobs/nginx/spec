@@ -2,6 +2,24 @@
 name: nginx
 templates:
   ctl: bin/ctl
+  nginx.conf.erb: config/nginx.conf
 
 packages:
   - nginx
+
+properties:
+  nginx.events.worker_connections:
+    description: Specifies how many worker connection can be opened at the same time
+    default: 1024
+  nginx.http.tcp_nopush:
+    description: When set on true optimizes the amount of data send at once
+    default: on
+  nginx.http.keepalive_timeout:
+    description: timeout during which a keep-alive client connection will stay open
+    default: 65
+  nginx.http.server.listen:
+    description: Port on which the server will listen on
+    default: 80
+  nginx.http.server.server_name:
+    description: Adress on which the server will listen on
+    default: localhost
